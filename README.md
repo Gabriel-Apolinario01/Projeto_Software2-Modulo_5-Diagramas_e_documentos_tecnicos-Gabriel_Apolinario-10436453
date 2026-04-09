@@ -4,7 +4,7 @@
 Plataforma de documentação inteligente utilizando microsserviços e Inteligência Artificial.
 
 ## Objetivo Modulo 5:
-Gerar automaticamente diagramas e documentação técnica a partir do código-fonte utilizando Inteligência Artificial.
+Gerar automaticamente diagramas e documentação técnica a partir de códigos utilizando Inteligência Artificial.
 
 ## Funcionalidades previstas:
 - Geração de diagramas de arquitetura
