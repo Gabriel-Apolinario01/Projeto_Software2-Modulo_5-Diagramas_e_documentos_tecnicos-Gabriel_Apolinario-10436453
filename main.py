@@ -1,16 +1,30 @@
-# This is a sample Python script.
+from fastapi import FastAPI
+from pydantic import BaseModel
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+app = FastAPI()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+class CodeInput(BaseModel):
+    code: str
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+@app.get("/")
+def home():
+    return {"message": "API do Módulo 5 funcionando"}
+
+
+@app.post("/generate-diagram")
+def generate_diagram(input: CodeInput):
+    # Simulação de diagrama UML
+    diagram = """
+    @startuml
+    class User
+    class Order
+    User --> Order
+    @enduml
+    """
+
+    return {
+        "diagram": diagram,
+        "message": "Diagrama gerado com sucesso"
+    }
