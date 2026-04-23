@@ -73,6 +73,6 @@ Uvicorn
 ---
 
 Integrantes
-Gabriel Apolinário
-Leonardo Zani
-Felipe Yuji
+- Gabriel Apolinário
+- Leonardo Zani
+- Felipe Yuji
